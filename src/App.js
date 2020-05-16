@@ -16,6 +16,7 @@ function App() {
         {loading && <h1> Loading ...</h1>}
         {error && <h1> Error. Try Refreshing.</h1>}
         {jobs.map(job => {
+          console.log(job)
           return <Job key={job.id} job={job}/> 
         } )}
 
