@@ -14,14 +14,14 @@ function App() {
     <div className="App">
       <Container className='app-Container'>
         <h1 className='app-title' >GitHub Jobs</h1>
-        <JobsPagination page={page} setPage={setPage} hasNextPage={true}/>
+        <JobsPagination page={page} setPage={setPage} hasNextPage={hasNextPage}/>
         {loading && <h1> Loading ...</h1>}
         {error && <h1> Error. Try Refreshing.</h1>}
         {jobs.map(job => {
           console.log(job)
           return <Job key={job.id} job={job}/> 
         } )}
-        <JobsPagination page={page} setPage={setPage} hasNextPage={true}/>
+        <JobsPagination page={page} setPage={setPage} hasNextPage={hasNextPage}/>
       </Container>
     </div>
   );
