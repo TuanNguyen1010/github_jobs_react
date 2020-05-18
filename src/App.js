@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import './App.css';
 import useFetchJobs from './useFetchJobs';
 import {Container } from 'react-bootstrap';
-import Job from './job'
+import Job from './Job'
 
 function App() {
   const [params, setParams] = useState({})

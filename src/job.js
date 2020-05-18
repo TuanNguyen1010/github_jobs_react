@@ -1,8 +1,10 @@
-import React from 'react'
-import {Card, Badge} from 'react-bootstrap'
+import React, {useState} from 'react';
+import {Card, Badge, Button, Collapse} from 'react-bootstrap';
 import ReactMarkdown from 'react-markdown/with-html'
 
-export default function job({job}) {
+export default function Job({job}) {
+
+  const [open, setOpen] = useState(false)
   return (
 
     <Card> 
@@ -21,7 +23,24 @@ export default function job({job}) {
               <ReactMarkdown source={job.how_to_apply} escapeHtml={false} />
             </div>
           </div>
+          <img
+            className='d-none d-md-block'
+            height='50'  
+            alt={job.company} 
+            src={job.company_logo}/> 
         </div>
+        <Card.Text>
+          <Button 
+          onClick={() =>{ setOpen(Open => !Open)}}
+          variant='primary'>
+            {open? 'Hide Details' : 'View Details'}
+          </Button>
+        </Card.Text>
+        <Collapse in={open}>
+        <div className='mt-4'>
+          <ReactMarkdown source={job.description} escapeHtml={false}/>
+        </div>
+        </Collapse>
       </Card.Body>
     </Card>
   )
