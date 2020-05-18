@@ -5,8 +5,8 @@ import ReactMarkdown from 'react-markdown/with-html'
 export default function Job({job}) {
 
   const [open, setOpen] = useState(false)
-  return (
 
+  return (
     <Card className='mb-4'> 
       <Card.Body>
         <div className= "d-flex justify-content-between">
