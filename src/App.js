@@ -8,7 +8,7 @@ import JobsPagination from './JobsPagination';
 function App() {
   const [params, setParams] = useState({})
   const [page, setPage] = useState(1)
-  const {jobs, loading, error} = useFetchJobs(params, page)
+  const {jobs, loading, error, hasNextPage} = useFetchJobs(params, page)
 
   return (
     <div className="App">
