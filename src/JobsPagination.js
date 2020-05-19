@@ -16,7 +16,6 @@ export default function JobsPagination({page, setPage, hasNextPage}) {
         {hasNextPage && <Pagination.Item onClick={() =>  adjustPage(1)}>{page + 1}</Pagination.Item>}
         {hasNextPage && <Pagination.Next onClick={() =>  adjustPage(1)}/>}
       </Pagination>
-      {console.log(page)}
     </div>
   )
 }
