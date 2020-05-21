@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
-import './App.css';
-import useFetchJobs from './useFetchJobs';
+import '../../styles/App.css';
+import useFetchJobs from '../useFetchJobs/useFetchJobs';
 import {Container } from 'react-bootstrap';
-import Job from './Job'
-import JobsPagination from './JobsPagination';
-import SearchForm from './SearchForm'
+import Job from '../Job/Job'
+import JobsPagination from '../JobsPagination/JobsPagination';
+import SearchForm from '../SearchForm/SearchForm'
 
 function App() {
   const [params, setParams] = useState({})
