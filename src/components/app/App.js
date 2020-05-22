@@ -22,7 +22,7 @@ function App() {
   
 
   return (
-    <div className="App">
+    <div className="App" data-test='app-component'>
       <Container className='app-Container'>
         <h1 className='app-title' >GitHub Jobs</h1>
         <SearchForm params={params} onParamChange={handleParamChange}/>
