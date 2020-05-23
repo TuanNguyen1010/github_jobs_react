@@ -39,7 +39,7 @@ export default function Job({job}) {
         </Card.Text>
         <Collapse in={open}>
         <div className='mt-4'>
-          <ReactMarkdown data-test='job-description' source={job.description} escapeHtml={false}/>
+          <ReactMarkdown source={job.description} escapeHtml={false}/>
         </div>
         </Collapse>
       </Card.Body>

@@ -1,6 +1,6 @@
 import React from 'react';
 import App from './App';
-import Enzyme, {shallow} from 'enzyme';
+import {shallow} from 'enzyme';
 
 
 describe('testing main app', () => {
