@@ -6,6 +6,7 @@ describe('Job pagination', () => {
 
   const setPage = jest.fn()
   const hasNextPage = false
+  const hasNextPageTrue = true
   const page = 1
   it('renders Jobs pagination component', () => {
     const wrapper = shallow(<JobsPagination 
@@ -25,7 +26,7 @@ describe('Job pagination', () => {
       hasNextPage ={hasNextPage}/>)
 
     expect(wrapper.find("[data-test='JobsPagination-back-button']").text()).toBe('')
-    expect(wrapper.find("[data-test='JobsPagination-previous-page']").text()).toBe('')
+    expect(wrapper.find("[data-test='JobsPagination-first-page']").text()).toBe('')
   })
 
   it('should display previous button and page number on page 4', () => {
@@ -36,11 +37,10 @@ describe('Job pagination', () => {
       hasNextPage ={hasNextPage}/>)
 
     expect(wrapper.find("[data-test='JobsPagination-back-button']").text()).toBe('<Prev />')
-    expect(wrapper.find("[data-test='JobsPagination-previous-page']").text()).toBe('1')
+    expect(wrapper.find("[data-test='JobsPagination-first-page']").text()).toBe('1')
   })
 
   it('should display next button and next page number', () => {
-    const hasNextPageTrue = true
     const wrapper = shallow(<JobsPagination 
       page = {page}
       setPage ={setPage}
