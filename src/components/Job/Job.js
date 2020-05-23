@@ -7,12 +7,12 @@ export default function Job({job}) {
   const [open, setOpen] = useState(false)
 
   return (
-    <Card className='mb-4'> 
+    <Card className='mb-4' data-test='job-component'> 
       <Card.Body>
         <div className= "d-flex justify-content-between">
           <div> 
-            <Card.Title>
-              {job.title} - <span className='text-muted font-weight-light'> {job.company} </span>
+            <Card.Title >
+             <p data-test='job-title'> {job.title} </p>- <span className='text-muted font-weight-light' data-test='job-company'> {job.company} </span>
             </Card.Title>
             <Card.Subtitle className='text-muted mb-2'>
               {new Date(job.created_at).toLocaleDateString()}
