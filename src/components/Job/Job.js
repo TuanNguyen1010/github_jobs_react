@@ -12,18 +12,19 @@ export default function Job({job}) {
         <div className= "d-flex justify-content-between">
           <div> 
             <Card.Title >
-             <p data-test='job-title'> {job.title} </p>- <span className='text-muted font-weight-light' data-test='job-company'> {job.company} </span>
+             <p data-test='job-title'>{job.title}</p>- <span className='text-muted font-weight-light' data-test='job-company'>{job.company}</span>
             </Card.Title>
             <Card.Subtitle className='text-muted mb-2'>
               {new Date(job.created_at).toLocaleDateString()}
             </Card.Subtitle>
             <Badge variant= 'secondary' className='mr-2'>{job.type}</Badge>
-            <Badge variant= 'secondary'>{job.location}</Badge>
+            <Badge variant= 'secondary' data-test='job-location'>{job.location}</Badge>
             <div style={{wordBreak: 'break-all'}}> 
               <ReactMarkdown source={job.how_to_apply} escapeHtml={false} />
             </div>
           </div>
           <img
+            data-test='job-company_logo'
             className='d-none d-md-block'
             height='50'  
             alt={job.company} 
@@ -38,7 +39,7 @@ export default function Job({job}) {
         </Card.Text>
         <Collapse in={open}>
         <div className='mt-4'>
-          <ReactMarkdown source={job.description} escapeHtml={false}/>
+          <ReactMarkdown data-test='job-description' source={job.description} escapeHtml={false}/>
         </div>
         </Collapse>
       </Card.Body>
