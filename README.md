@@ -33,6 +33,8 @@ A React web application that allows users to search for jobs. A user can search 
 - Jest
 - Enzyme
 
+### External jobs API
+- GitHub jobs API here - https://jobs.github.com/api
 
 ### Tools
 - Axios
