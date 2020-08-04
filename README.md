@@ -20,10 +20,11 @@ A React web application that allows users to search for jobs. A user can search 
 
 ## Features
 - User can browse through jobs on the home page
-- User can enter search
-- User can visit the Favourites page
-- User can view all the liked images
-- User can delete an image from favourites list
+- User can enter search keywords
+- User can enter search location
+- User can click on apply link
+- User can can click show more details
+- 
 
 ## Technologies Used
 - Javascript
