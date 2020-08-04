@@ -5,7 +5,7 @@
 A React web application that allows users to search for jobs. A user can search for jobs with search keyword and location.
 
 ## Live Demo
-
+![gif1](public/jobsGiphy.gif)
 
 ## Getting Started
 
