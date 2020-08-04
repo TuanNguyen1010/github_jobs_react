@@ -50,6 +50,10 @@ So I can browse job postings
 I want to see the jobs on the page
 
 As a user
+So I can find specific jobs
+I want to be able to search keywords
+
+As a user
 So I can see more details
 I want to be able to click show more
 
